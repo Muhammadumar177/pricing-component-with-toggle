@@ -4,29 +4,125 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articles</title>
+  <title>Pricing Component</title>
+
+  <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,800&display=swap" rel="stylesheet">
+
+<!-- links -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css ">
 </head>
 <body>
-  <div class="main-content">
-    <div class="container">
-      <div class="main-wrap">
-        <h1 class="main-heading">
-          Our Pricing
-        </h1>
-        <div class="switcher-wrap">
-          <p class="switcher-wrap-text" >Annually</p>
+  <main class="main-content">
+    <div class=" page container">
+      <h1 class="page-tittle"> Our Pricing </h1>
+    <form class="pricing-switch" action="https://echo.htmlacademy.ru" method="get">
+      <div class="switch">
+        <input class="switch-input-annuall visuallyhidden" type="radio" name="payment_period" value="annually" id="annually-payment-radio">
+        <input class="switch-input-monthly visuallyhidden" type="radio" name="payment_period" value="monthly" id="monthly-payment-radio" checked>
 
-          <p class="switcher-wrap-text" >Annually</p>
+        <label class="switch-label" for="annually-payment-radio">
+          Annually
+
+        </label>
+
+        <div class="switch-control">
+          <div class="switch-circle"></div>
+          <label class="switch-contlor-annuall" for="annually-payment-radio">
+
+          </label>
+          <label class="switch-control-monthly" for="monthly-payment-radio">
+
+          </label>
+        </div>
+
+        <label class="switch-label" for="monthly-payment-radio">
+          Monthly
+        </label>
+      </div>
+    </form>
+
+    <!-- pricing section -->
+
+      <div class="pricing">
+        <h2 class="visuallyhidden">Pricing </h2>
+        <div class="pricing-inner">
+
+          <section class="pricing-plan" data-payment-annually="199.99" data-payment-monthly="19.99">
+            <h3 class="pricing-plan-tittle">
+              Basic
+            </h3>
+            <div class="pricing-plan-price">
+              <span class="pricing-plan-price-currency">$</span>
+          <span class="pricing-plan-value">    19.99</span>
+            </div>
+            <ul class="pricing-plan-features">
+              <li class="pricing-plan-feature">
+                500 GB Storage
+              </li>
+              <li class="pricing-plan-feature">
+                2 Users Allowed
+              </li>
+                <li class="pricing-plan-feature">
+                  Send up to 3 GB
+                </li>
+            </ul>
+            <a class="button mutton-block button-primary " href="#" >Learn more</a>
+          </section>
+
+          <section class="pricing-plan  pricing-plan-best" data-payment-annually="299.99" data-payment-monthly="24.99">
+            <h3 class="pricing-plan-tittle">
+              Professional
+            </h3>
+            <div class="pricing-plan-price">
+              <span class="pricing-plan-price-currency">$</span>
+           <span class="pricing-plan-value">24.99</span>
+            </div>
+            <ul class="pricing-plan-features">
+              <li class="pricing-plan-feature">
+                1 TB Storage
+              </li>
+              <li class="pricing-plan-feature">
+                5 Users Allowed
+              </li>
+                <li class="pricing-plan-feature">
+                  Send up to 10 GB
+                </li>
+            </ul>
+            <a class="button mutton-block button-white" href="#" >Learn more</a>
+          </section>
+
+          <section class="pricing-plan   " data-payment-annually="399.99" data-payment-monthly="39.99">
+            <h3 class="pricing-plan-tittle">
+              Master
+            </h3>
+            <div class="pricing-plan-price">
+              <span class="pricing-plan-price-currency">$</span>
+              <span class="pricing-plan-value">39.99</span>
+            </div>
+            <ul class="pricing-plan-features">
+              <li class="pricing-plan-feature">
+                2 TB Storage
+              </li>
+              <li class="pricing-plan-feature">
+                10 Users Allowed
+              </li>
+                <li class="pricing-plan-feature">
+                  Send up to 20 GB
+                </li>
+            </ul>
+            <a class="button mutton-block button-primary" href="#" >Learn more</a>
+          </section>
         </div>
       </div>
 
-    </div>
   </div>
+  </main>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>
